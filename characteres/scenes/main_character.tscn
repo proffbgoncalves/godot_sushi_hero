@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://b70mdgxeaepen"]
+
+[ext_resource type="Script" uid="uid://b5c5h5afaynnm" path="res://characteres/scripts/main_character.gd" id="1_gtc0d"]
+[ext_resource type="PackedScene" uid="uid://d3fxiamhwx8jv" path="res://characteres/scenes/panda.tscn" id="1_ik21o"]
+[ext_resource type="Script" uid="uid://sivqwtlbj4gp" path="res://characteres/scripts/character_body.gd" id="3_c3jrq"]
+[ext_resource type="Script" uid="uid://7j25jmxbqw83" path="res://characteres/scripts/spring_arm_offset.gd" id="3_ou811"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gtc0d"]
+radius = 1.0
+height = 3.6
+
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("_body", "_spring_arm_offset")]
+script = ExtResource("1_gtc0d")
+_body = NodePath("Panda")
+_spring_arm_offset = NodePath("SpringArmOffset")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+shape = SubResource("CapsuleShape3D_gtc0d")
+
+[node name="Panda" parent="." node_paths=PackedStringArray("_character") instance=ExtResource("1_ik21o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0309432, 0, 0.0187311)
+script = ExtResource("3_c3jrq")
+_character = NodePath("..")
+
+[node name="SpringArmOffset" type="Node3D" parent="." node_paths=PackedStringArray("_spring_arm")]
+script = ExtResource("3_ou811")
+_spring_arm = NodePath("SpringArm")
+
+[node name="SpringArm" type="SpringArm3D" parent="SpringArmOffset"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+spring_length = 5.0
+
+[node name="Camera3D" type="Camera3D" parent="SpringArmOffset/SpringArm"]
+current = true

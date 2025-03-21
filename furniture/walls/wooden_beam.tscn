@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=4 uid="uid://bnm677jybs73n"]
+
+[ext_resource type="Texture2D" uid="uid://snkix5lsfdn2" path="res://models/atlas_texture.png" id="1_mlq2s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pdlkd"]
+resource_name = "Atlas"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_mlq2s")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8kkma"]
+_surfaces = [{
+"aabb": AABB(-0.187168, -0.0092796, -0.187168, 0.374336, 5.15044, 0.374346),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Atlas",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("Aqk/vnoJGLwCqT8+Aqk/vl2EpEACqT8+Aqk/vnoJGLwCqT++Aqk/vl2EpEACqT++Aqk/PnoJGLwCqT8+Aqk/Pl2EpEACqT8+Aqk/PnoJGLwCqT++Aqk/Pl2EpEACqT++")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jo5ja"]
+resource_name = "wooden_beam_Cube182"
+_surfaces = [{
+"aabb": AABB(-0.187168, -0.0092796, -0.187168, 0.374336, 5.15044, 0.374346),
+"attribute_data": PackedByteArray("/mdbPqC4Bj0kblw+4DgKPUgFXD6guAY9/mdbPkDRCj1IBVw+QNEKPbQ5XD4AhQo9bJxbPqC4Bj20OVw+4DgKPdrQWz5A0Qo9bJxbPkDRCj3a0Fs+oLgGPSRuXD4AhQo9JG5cPgCFCj3a0Fs+oLgGPUgFXD5A0Qo92tBbPkDRCj20OVw+QNEKPUgFXD6guAY9tDlcPgCFCj1snFs+QNEKPbQ5XD5A0Qo9bJxbPqC4Bj0kblw+QNEKPbQ5XD6guAY9"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAAJAAMAAAAGAAkACAAVAAoACAATABUAFAARABcAFAAOABEADQAEAA8ADQACAAQABwAMABIABwABAAwAFgAFAAsAFgAQAAUA"),
+"material": SubResource("StandardMaterial3D_pdlkd"),
+"name": "Atlas",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("Aqk/vnoJGLwCqT8+Aqk/vnoJGLwCqT8+Aqk/vnoJGLwCqT8+Aqk/vl2EpEACqT8+Aqk/vl2EpEACqT8+Aqk/vl2EpEACqT8+Aqk/vnoJGLwCqT++Aqk/vnoJGLwCqT++Aqk/vnoJGLwCqT++Aqk/vl2EpEACqT++Aqk/vl2EpEACqT++Aqk/vl2EpEACqT++Aqk/PnoJGLwCqT8+Aqk/PnoJGLwCqT8+Aqk/PnoJGLwCqT8+Aqk/Pl2EpEACqT8+Aqk/Pl2EpEACqT8+Aqk/Pl2EpEACqT8+Aqk/PnoJGLwCqT++Aqk/PnoJGLwCqT++Aqk/PnoJGLwCqT++Aqk/Pl2EpEACqT++Aqk/Pl2EpEACqT++Aqk/Pl2EpEACqT++AAD/f///////fwAA/3//v/9//38AAP+/AAD/f///////f/9/AAD/v/9/////////AAD/f///////fwAA/3//v/////8AAP+/AAD/f///////////AAD/v/9//////////38AAP9//7//f/9/AAD/v////3///////3//fwAA/7//f////////////3///////38AAP9//7//////AAD/v////3///////////wAA/7//f////////////3//////")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_8kkma")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5a5ed"]
+points = PackedVector3Array(-0.187168, -0.0092796, -0.187168, -0.187168, -0.0092796, 0.187168, -0.187168, 5.14116, -0.187168, 0.187168, -0.0092796, -0.187168, 0.187168, -0.0092796, 0.187168, -0.187168, 5.14116, 0.187168, 0.187168, 5.14116, -0.187168, 0.187168, 5.14116, 0.187168)
+
+[node name="WoodenBeam" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_jo5ja")
+skeleton = NodePath("")
+
+[node name="Body" type="StaticBody3D" parent="."]
+
+[node name="Collision" type="CollisionShape3D" parent="Body"]
+shape = SubResource("ConvexPolygonShape3D_5a5ed")

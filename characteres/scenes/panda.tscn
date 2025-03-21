@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3fxiamhwx8jv"]
+
+[ext_resource type="PackedScene" uid="uid://hsvma7d5j35b" path="res://models/characters/with_knife_and_pan/panda.gltf" id="1_co4x1"]
+[ext_resource type="Script" uid="uid://cnqy516iafr83" path="res://characteres/scripts/panda.gd" id="2_2mew3"]
+
+[node name="Panda" node_paths=PackedStringArray("_animation_player") instance=ExtResource("1_co4x1")]
+script = ExtResource("2_2mew3")
+_animation_player = NodePath("AnimationPlayer")
+
+[node name="Skeleton3D" parent="CharacterArmature" index="0"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Knife" parent="CharacterArmature/Skeleton3D" index="1"]
+visible = false
+
+[node name="Pan" parent="CharacterArmature/Skeleton3D" index="2"]
+visible = false
