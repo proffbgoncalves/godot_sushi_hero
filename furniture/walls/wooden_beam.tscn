@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnm677jybs73n"]
+[gd_scene load_steps=6 format=4 uid="uid://bnm677jybs73n"]
 
 [ext_resource type="Texture2D" uid="uid://snkix5lsfdn2" path="res://models/atlas_texture.png" id="1_mlq2s"]
 
@@ -12,13 +12,14 @@ roughness = 0.5
 [sub_resource type="ArrayMesh" id="ArrayMesh_8kkma"]
 _surfaces = [{
 "aabb": AABB(-0.187168, -0.0092796, -0.187168, 0.374336, 5.15044, 0.374346),
-"format": 4097,
+"format": 34359742465,
 "index_count": 36,
-"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 2, 0, 7, 0, 3, 0, 2, 0, 6, 0, 7, 0, 6, 0, 5, 0, 7, 0, 6, 0, 4, 0, 5, 0, 4, 0, 1, 0, 5, 0, 4, 0, 0, 0, 1, 0, 2, 0, 4, 0, 6, 0, 2, 0, 0, 0, 4, 0, 7, 0, 1, 0, 3, 0, 7, 0, 5, 0, 1, 0),
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
 "name": "Atlas",
 "primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(2, 169, 63, 190, 122, 9, 24, 188, 2, 169, 63, 62, 2, 169, 63, 190, 93, 132, 164, 64, 2, 169, 63, 62, 2, 169, 63, 190, 122, 9, 24, 188, 2, 169, 63, 190, 2, 169, 63, 190, 93, 132, 164, 64, 2, 169, 63, 190, 2, 169, 63, 62, 122, 9, 24, 188, 2, 169, 63, 62, 2, 169, 63, 62, 93, 132, 164, 64, 2, 169, 63, 62, 2, 169, 63, 62, 122, 9, 24, 188, 2, 169, 63, 190, 2, 169, 63, 62, 93, 132, 164, 64, 2, 169, 63, 190)
+"vertex_data": PackedByteArray("Aqk/vnoJGLwCqT8+Aqk/vl2EpEACqT8+Aqk/vnoJGLwCqT++Aqk/vl2EpEACqT++Aqk/PnoJGLwCqT8+Aqk/Pl2EpEACqT8+Aqk/PnoJGLwCqT++Aqk/Pl2EpEACqT++")
 }]
 blend_shape_mode = 0
 
@@ -26,15 +27,16 @@ blend_shape_mode = 0
 resource_name = "wooden_beam_Cube182"
 _surfaces = [{
 "aabb": AABB(-0.187168, -0.0092796, -0.187168, 0.374336, 5.15044, 0.374346),
-"attribute_data": PackedByteArray(254, 103, 91, 62, 160, 184, 6, 61, 36, 110, 92, 62, 224, 56, 10, 61, 72, 5, 92, 62, 160, 184, 6, 61, 254, 103, 91, 62, 64, 209, 10, 61, 72, 5, 92, 62, 64, 209, 10, 61, 180, 57, 92, 62, 0, 133, 10, 61, 108, 156, 91, 62, 160, 184, 6, 61, 180, 57, 92, 62, 224, 56, 10, 61, 218, 208, 91, 62, 64, 209, 10, 61, 108, 156, 91, 62, 64, 209, 10, 61, 218, 208, 91, 62, 160, 184, 6, 61, 36, 110, 92, 62, 0, 133, 10, 61, 36, 110, 92, 62, 0, 133, 10, 61, 218, 208, 91, 62, 160, 184, 6, 61, 72, 5, 92, 62, 64, 209, 10, 61, 218, 208, 91, 62, 64, 209, 10, 61, 180, 57, 92, 62, 64, 209, 10, 61, 72, 5, 92, 62, 160, 184, 6, 61, 180, 57, 92, 62, 0, 133, 10, 61, 108, 156, 91, 62, 64, 209, 10, 61, 180, 57, 92, 62, 64, 209, 10, 61, 108, 156, 91, 62, 160, 184, 6, 61, 36, 110, 92, 62, 64, 209, 10, 61, 180, 57, 92, 62, 160, 184, 6, 61),
-"format": 4119,
+"attribute_data": PackedByteArray("/mdbPqC4Bj0kblw+4DgKPUgFXD6guAY9/mdbPkDRCj1IBVw+QNEKPbQ5XD4AhQo9bJxbPqC4Bj20OVw+4DgKPdrQWz5A0Qo9bJxbPkDRCj3a0Fs+oLgGPSRuXD4AhQo9JG5cPgCFCj3a0Fs+oLgGPUgFXD5A0Qo92tBbPkDRCj20OVw+QNEKPUgFXD6guAY9tDlcPgCFCj1snFs+QNEKPbQ5XD5A0Qo9bJxbPqC4Bj0kblw+QNEKPbQ5XD6guAY9"),
+"format": 34359742487,
 "index_count": 36,
-"index_data": PackedByteArray(0, 0, 9, 0, 3, 0, 0, 0, 6, 0, 9, 0, 8, 0, 21, 0, 10, 0, 8, 0, 19, 0, 21, 0, 20, 0, 17, 0, 23, 0, 20, 0, 14, 0, 17, 0, 13, 0, 4, 0, 15, 0, 13, 0, 2, 0, 4, 0, 7, 0, 12, 0, 18, 0, 7, 0, 1, 0, 12, 0, 22, 0, 5, 0, 11, 0, 22, 0, 16, 0, 5, 0),
+"index_data": PackedByteArray("AAAJAAMAAAAGAAkACAAVAAoACAATABUAFAARABcAFAAOABEADQAEAA8ADQACAAQABwAMABIABwABAAwAFgAFAAsAFgAQAAUA"),
 "material": SubResource("StandardMaterial3D_pdlkd"),
 "name": "Atlas",
 "primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray(2, 169, 63, 190, 122, 9, 24, 188, 2, 169, 63, 62, 0, 0, 255, 127, 255, 255, 255, 255, 2, 169, 63, 190, 122, 9, 24, 188, 2, 169, 63, 62, 255, 127, 0, 0, 255, 127, 255, 191, 2, 169, 63, 190, 122, 9, 24, 188, 2, 169, 63, 62, 255, 127, 255, 127, 0, 0, 255, 191, 2, 169, 63, 190, 93, 132, 164, 64, 2, 169, 63, 62, 0, 0, 255, 127, 255, 255, 255, 255, 2, 169, 63, 190, 93, 132, 164, 64, 2, 169, 63, 62, 255, 127, 255, 127, 0, 0, 255, 191, 2, 169, 63, 190, 93, 132, 164, 64, 2, 169, 63, 62, 255, 127, 255, 255, 255, 255, 255, 255, 2, 169, 63, 190, 122, 9, 24, 188, 2, 169, 63, 190, 0, 0, 255, 127, 255, 255, 255, 255, 2, 169, 63, 190, 122, 9, 24, 188, 2, 169, 63, 190, 255, 127, 0, 0, 255, 127, 255, 191, 2, 169, 63, 190, 122, 9, 24, 188, 2, 169, 63, 190, 255, 255, 255, 255, 0, 0, 255, 191, 2, 169, 63, 190, 93, 132, 164, 64, 2, 169, 63, 190, 0, 0, 255, 127, 255, 255, 255, 255, 2, 169, 63, 190, 93, 132, 164, 64, 2, 169, 63, 190, 255, 255, 255, 255, 0, 0, 255, 191, 2, 169, 63, 190, 93, 132, 164, 64, 2, 169, 63, 190, 255, 127, 255, 255, 255, 255, 255, 255, 2, 169, 63, 62, 122, 9, 24, 188, 2, 169, 63, 62, 255, 127, 0, 0, 255, 127, 255, 191, 2, 169, 63, 62, 122, 9, 24, 188, 2, 169, 63, 62, 255, 127, 255, 127, 0, 0, 255, 191, 2, 169, 63, 62, 122, 9, 24, 188, 2, 169, 63, 62, 255, 255, 255, 127, 255, 255, 255, 255, 2, 169, 63, 62, 93, 132, 164, 64, 2, 169, 63, 62, 255, 127, 255, 127, 0, 0, 255, 191, 2, 169, 63, 62, 93, 132, 164, 64, 2, 169, 63, 62, 255, 127, 255, 255, 255, 255, 255, 255, 2, 169, 63, 62, 93, 132, 164, 64, 2, 169, 63, 62, 255, 255, 255, 127, 255, 255, 255, 255, 2, 169, 63, 62, 122, 9, 24, 188, 2, 169, 63, 190, 255, 127, 0, 0, 255, 127, 255, 191, 2, 169, 63, 62, 122, 9, 24, 188, 2, 169, 63, 190, 255, 255, 255, 255, 0, 0, 255, 191, 2, 169, 63, 62, 122, 9, 24, 188, 2, 169, 63, 190, 255, 255, 255, 127, 255, 255, 255, 255, 2, 169, 63, 62, 93, 132, 164, 64, 2, 169, 63, 190, 255, 255, 255, 255, 0, 0, 255, 191, 2, 169, 63, 62, 93, 132, 164, 64, 2, 169, 63, 190, 255, 127, 255, 255, 255, 255, 255, 255, 2, 169, 63, 62, 93, 132, 164, 64, 2, 169, 63, 190, 255, 255, 255, 127, 255, 255, 255, 255)
+"vertex_data": PackedByteArray("Aqk/vnoJGLwCqT8+Aqk/vnoJGLwCqT8+Aqk/vnoJGLwCqT8+Aqk/vl2EpEACqT8+Aqk/vl2EpEACqT8+Aqk/vl2EpEACqT8+Aqk/vnoJGLwCqT++Aqk/vnoJGLwCqT++Aqk/vnoJGLwCqT++Aqk/vl2EpEACqT++Aqk/vl2EpEACqT++Aqk/vl2EpEACqT++Aqk/PnoJGLwCqT8+Aqk/PnoJGLwCqT8+Aqk/PnoJGLwCqT8+Aqk/Pl2EpEACqT8+Aqk/Pl2EpEACqT8+Aqk/Pl2EpEACqT8+Aqk/PnoJGLwCqT++Aqk/PnoJGLwCqT++Aqk/PnoJGLwCqT++Aqk/Pl2EpEACqT++Aqk/Pl2EpEACqT++Aqk/Pl2EpEACqT++AAD/f///////fwAA/3//v/9//38AAP+/AAD/f///////f/9/AAD/v/9/////////AAD/f///////fwAA/3//v/////8AAP+/AAD/f///////////AAD/v/9//////////38AAP9//7//f/9/AAD/v////3///////3//fwAA/7//f////////////3///////38AAP9//7//////AAD/v////3///////////wAA/7//f////////////3//////")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8kkma")
