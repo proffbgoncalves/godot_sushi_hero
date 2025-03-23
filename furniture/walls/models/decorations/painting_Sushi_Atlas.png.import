@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8st2h0h8ttu8"
+uid="uid://bmir5oeqivur6"
 path.s3tc="res://.godot/imported/painting_Sushi_Atlas.png-07b80036f5f6c1b5df74cd2fee13de1a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

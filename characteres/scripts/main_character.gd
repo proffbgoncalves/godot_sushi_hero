@@ -40,6 +40,7 @@ func _move() -> void:
 	if _direction:
 		self.velocity.x = _direction.x * _current_speed
 		self.velocity.z = _direction.z * _current_speed
+		self._body.apply_rotation(self.velocity)
 		return
 		
 	self.velocity.x = move_toward(self.velocity.x, 0, self._current_speed)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3unw5q2nsljx"]
+
+[ext_resource type="MeshLibrary" uid="uid://dui5aeopptpaw" path="res://gridmaps/resources/walls.tres" id="1_jmu4s"]
+
+[node name="WallsGripMap" type="GridMap"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.9, 0.5)
+mesh_library = ExtResource("1_jmu4s")
+cell_size = Vector3(1, 1, 1)
