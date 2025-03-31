@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cdvdpc27t2b6b"]
+[gd_scene load_steps=13 format=3 uid="uid://cdvdpc27t2b6b"]
 
 [ext_resource type="PackedScene" uid="uid://b70mdgxeaepen" path="res://characteres/scenes/main_character.tscn" id="1_jfo8e"]
 [ext_resource type="PackedScene" uid="uid://blor77riqpqcv" path="res://gridmaps/scenes/floor_grid_map.tscn" id="2_q5aul"]
 [ext_resource type="PackedScene" uid="uid://d3unw5q2nsljx" path="res://gridmaps/scenes/walls_grip_map.tscn" id="3_i8i6m"]
 [ext_resource type="PackedScene" uid="uid://bud4gx6y0ui2v" path="res://gridmaps/scenes/counters_grid_map.tscn" id="4_c8eu1"]
+[ext_resource type="Material" uid="uid://btntdpqkc31xa" path="res://shaders/materials/sky_shader.tres" id="5_tl0x2"]
+[ext_resource type="Shader" uid="uid://cc0wtjvnpmmy4" path="res://shaders/shaders/fog.gdshader" id="6_m7gta"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jfo8e"]
 size = Vector2(1000, 1000)
@@ -14,6 +16,34 @@ albedo_color = Color(0.117647, 0.117647, 0.117647, 1)
 [sub_resource type="NavigationMesh" id="NavigationMesh_c8eu1"]
 vertices = PackedVector3Array(17.5, 0.592, -29.75, 17.5, 0.592, -33.5, 13.5, 0.592, -33.75, 14.25, 0.592, -14.5, 13.5, 0.592, -37.5, 9.5, 0.592, -37.75, 9.5, 0.592, -41.5, 5.5, 0.592, -41.75, -5.5, 0.592, -41.75, -9.5, 0.592, -41.5, -9.75, 0.592, -37.5, -13.5, 0.592, -37.5, -13.75, 0.592, -33.5, -17.5, 0.592, -33.5, -17.75, 0.592, -29.5, -14.25, 0.592, -14.5, -21.5, 0.592, -29.5, -21.75, 0.592, -25.5, 21.75, 0.592, -25.5, 21.5, 0.592, -29.5, 14.5, 0.592, -10.5, 25.5, 0.592, -10.5, 25.5, 0.592, -25.5, 5.5, 0.592, -45.5, -5.5, 0.592, -45.5, -25.5, 0.592, -10.5, -14.5, 0.592, -10.5, -25.5, 0.592, -25.5)
 polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 2), PackedInt32Array(6, 5, 7), PackedInt32Array(7, 5, 8), PackedInt32Array(8, 5, 9), PackedInt32Array(9, 5, 10), PackedInt32Array(12, 11, 10), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 15), PackedInt32Array(16, 14, 17), PackedInt32Array(17, 14, 15), PackedInt32Array(19, 18, 0), PackedInt32Array(0, 18, 3), PackedInt32Array(20, 3, 21), PackedInt32Array(21, 3, 18), PackedInt32Array(21, 18, 22), PackedInt32Array(8, 24, 7), PackedInt32Array(7, 24, 23), PackedInt32Array(12, 10, 15), PackedInt32Array(15, 10, 5), PackedInt32Array(15, 5, 2), PackedInt32Array(15, 2, 3), PackedInt32Array(26, 25, 15), PackedInt32Array(15, 25, 17), PackedInt32Array(17, 25, 27)]
+
+[sub_resource type="Sky" id="Sky_m7gta"]
+sky_material = ExtResource("5_tl0x2")
+
+[sub_resource type="Environment" id="Environment_keub5"]
+background_mode = 2
+sky = SubResource("Sky_m7gta")
+ssr_enabled = true
+ssao_enabled = true
+ssao_radius = 2.0
+ssao_detail = 4.0
+ssil_enabled = true
+sdfgi_enabled = true
+fog_density = 0.0009
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0092
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_keub5"]
+shader = ExtResource("6_m7gta")
+shader_parameter/base_density = 1.0
+shader_parameter/base_color = Color(0, 0, 0, 1)
+shader_parameter/fade_out_height = 2.0
+shader_parameter/fade_out_distance = 1.5
+shader_parameter/noise_amounts = Vector3(0.4, 0.35, 0.25)
+shader_parameter/noise_scales = Vector3(1, 2, 4)
+shader_parameter/noise_velocity1 = Vector3(0.5, 0, 0)
+shader_parameter/noise_velocity2 = Vector3(1, 0, -1)
+shader_parameter/noise_velocity3 = Vector3(0, 0.6, 0.3)
 
 [node name="GameLevel" type="Node3D"]
 
@@ -142,3 +172,16 @@ data = {
 transform = Transform3D(1, 0, 0, 0, -0.5, 0.866025, 0, -0.866025, -0.5, 0, 4, 0)
 shadow_enabled = true
 shadow_blur = 0.5
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_keub5")
+
+[node name="Fog_1" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 82.5)
+size = Vector3(160, 0.5, 160)
+material = SubResource("ShaderMaterial_keub5")
+
+[node name="Fog_2" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -120.549)
+size = Vector3(160, 0.5, 160)
+material = SubResource("ShaderMaterial_keub5")
