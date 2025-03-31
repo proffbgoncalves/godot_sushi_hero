@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cdvdpc27t2b6b"]
+[gd_scene load_steps=14 format=3 uid="uid://cdvdpc27t2b6b"]
 
 [ext_resource type="PackedScene" uid="uid://b70mdgxeaepen" path="res://characteres/scenes/main_character.tscn" id="1_jfo8e"]
 [ext_resource type="PackedScene" uid="uid://blor77riqpqcv" path="res://gridmaps/scenes/floor_grid_map.tscn" id="2_q5aul"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bud4gx6y0ui2v" path="res://gridmaps/scenes/counters_grid_map.tscn" id="4_c8eu1"]
 [ext_resource type="Material" uid="uid://btntdpqkc31xa" path="res://shaders/materials/sky_shader.tres" id="5_tl0x2"]
 [ext_resource type="Shader" uid="uid://cc0wtjvnpmmy4" path="res://shaders/shaders/fog.gdshader" id="6_m7gta"]
+[ext_resource type="PackedScene" uid="uid://jejh0bptvcjq" path="res://interface/scenes/gui.tscn" id="7_keub5"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jfo8e"]
 size = Vector2(1000, 1000)
@@ -23,12 +24,8 @@ sky_material = ExtResource("5_tl0x2")
 [sub_resource type="Environment" id="Environment_keub5"]
 background_mode = 2
 sky = SubResource("Sky_m7gta")
-ssr_enabled = true
-ssao_enabled = true
 ssao_radius = 2.0
 ssao_detail = 4.0
-ssil_enabled = true
-sdfgi_enabled = true
 fog_density = 0.0009
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.0092
@@ -173,7 +170,7 @@ transform = Transform3D(1, 0, 0, 0, -0.5, 0.866025, 0, -0.866025, -0.5, 0, 4, 0)
 shadow_enabled = true
 shadow_blur = 0.5
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." groups=["environment"]]
 environment = SubResource("Environment_keub5")
 
 [node name="Fog_1" type="FogVolume" parent="."]
@@ -185,3 +182,5 @@ material = SubResource("ShaderMaterial_keub5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -120.549)
 size = Vector3(160, 0.5, 160)
 material = SubResource("ShaderMaterial_keub5")
+
+[node name="GUI" parent="." instance=ExtResource("7_keub5")]
