@@ -51,4 +51,4 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 1.4)
 light_energy = 2.0
 shadow_enabled = true
-omni_range = 10.0
+omni_range = 18.6935

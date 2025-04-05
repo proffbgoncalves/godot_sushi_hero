@@ -10,6 +10,7 @@ radius = 1.0
 height = 3.6
 
 [node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("_body", "_spring_arm_offset")]
+collision_mask = 3
 script = ExtResource("1_gtc0d")
 _body = NodePath("Panda")
 _spring_arm_offset = NodePath("SpringArmOffset")
